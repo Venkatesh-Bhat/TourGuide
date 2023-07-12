@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tourism App</string>
+    <string name="rating" />
+    <string name="loc_name" />
+    <string name="loc_place" />
+    <string name="title_activity_hotels_maps">hotelsMaps</string>
+    <string name="choose_location">Choose Location</string>
+</resources>

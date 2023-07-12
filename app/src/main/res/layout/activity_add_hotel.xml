@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addHotel"
+    android:background="@color/background"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/SpinCard"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/choose_location"
+                android:minHeight="48dp"
+                android:padding="10dp"
+
+                />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/NameCard"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/SpinCard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shapeType="pressed">
+
+            <EditText
+                android:id="@+id/hotelName"
+                android:textColor="@color/text_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:hint="Enter Hotel Name..."
+                android:inputType="text"
+                android:padding="10dp" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/PriceCard"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_backgroundColor="@color/background"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/NameCard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shapeType="pressed">
+
+            <EditText
+                android:id="@+id/hotelPrice"
+                android:textColor="@color/text_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:hint="Enter Price (per 2 guests)..."
+                android:inputType="number"
+                android:padding="10dp" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/PhoneCard"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/PriceCard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shapeType="pressed">
+
+            <EditText
+                android:id="@+id/phone"
+                android:textColor="@color/text_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/hotelPrice"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:hint="Enter Phone No..."
+                android:inputType="phone"
+                android:padding="10dp" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/primImgBtn"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PhoneCard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Add Image"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/primImgBtn"
+            android:layout_centerHorizontal="true" />
+
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageRecyclerView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:onClick="register"
+            android:text="Submit"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

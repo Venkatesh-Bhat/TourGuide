@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashScreen"
+    android:background="@color/background"
+    >
+<soup.neumorphism.NeumorphTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tour"
+    android:layout_centerHorizontal="true"
+    android:layout_above="@+id/iconImg"
+    android:text="Tourism"
+    android:textSize="@dimen/_30sdp"
+    android:textColor="@color/primary_text"
+    app:neumorph_shadowColorLight="@color/light_shadow"
+    app:neumorph_shadowColorDark="@color/dark_shadow"
+    tools:ignore="HardcodedText" />
+    <soup.neumorphism.NeumorphImageView
+
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:id="@+id/iconImg"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_location_on_24"
+        android:scaleType="centerInside"
+        app:neumorph_shapeType="pressed"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        />
+    <soup.neumorphism.NeumorphTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/app"
+        android:text="App"
+        android:layout_below="@+id/iconImg"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/primary_text"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>

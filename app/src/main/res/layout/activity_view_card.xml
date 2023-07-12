@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewCard"
+    android:background="@color/background"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="invisible"
+        android:id="@+id/zoomImg"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"
+        tools:ignore="ContentDescription,HardcodedText" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/background"
+        >
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainCard"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowElevation="@dimen/_5sdp"
+        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+        app:neumorph_backgroundColor="@color/background"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="@dimen/_15sdp">
+
+            <LinearLayout
+                android:id="@+id/im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/previous"
+                    android:layout_width="30sp"
+                    android:layout_height="match_parent"
+                    android:contentDescription=""
+                    android:onClick="onPreviousButtonClick"
+                    android:src="@drawable/baseline_chevron_left_24"
+                    app:neumorph_shadowColorLight="@color/light_shadow"
+                    app:neumorph_shadowColorDark="@color/dark_shadow"
+                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="285dp"
+                    android:layout_height="161dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/hampi"
+                    app:riv_corner_radius="@dimen/_8sdp"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/next"
+                    android:layout_width="30sp"
+                    android:layout_height="match_parent"
+                    android:contentDescription=""
+                    android:onClick="onNextButtonClick"
+                    android:src="@drawable/baseline_chevron_right_24"
+                    app:neumorph_shadowColorLight="@color/light_shadow"
+                    app:neumorph_shadowColorDark="@color/dark_shadow"
+                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/im"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentEnd="true"
+            android:text=""
+            android:textSize="30sp"
+            android:textColor="#F8BD0C"
+            app:drawableStartCompat="@drawable/baseline_star_rate_24"
+            tools:ignore="RelativeOverlap" />
+
+            <soup.neumorphism.NeumorphTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/im"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="TextView"
+                android:textColor="@color/primary_text"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                android:textSize="@dimen/_30sdp"
+                tools:ignore="HardcodedText"
+                tools:layout_editor_absoluteX="173dp"
+                tools:layout_editor_absoluteY="341dp"
+               />
+
+            <soup.neumorphism.NeumorphTextView
+                android:id="@+id/place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                android:layout_alignParentStart="true"
+                android:text="Place"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_15sdp"
+
+                tools:ignore="HardcodedText,TextSizeCheck" />
+
+            <soup.neumorphism.NeumorphImageButton
+                android:id="@+id/wishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="25sp"
+                android:layout_below="@+id/rating"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_favorite_border_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wishlist"
+                android:padding="@dimen/_20sdp"
+                android:id="@+id/descript"
+                />
+
+    </RelativeLayout>
+</soup.neumorphism.NeumorphCardView>
+<soup.neumorphism.NeumorphCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_20sdp"
+    android:layout_below="@+id/mainCard"
+    app:neumorph_shadowColorDark="@color/dark_shadow"
+    app:neumorph_shadowColorLight="@color/light_shadow"
+    android:onClick="viewHotelPage"
+    app:neumorph_backgroundColor="@color/background"
+    app:neumorph_shadowElevation="@dimen/_5sdp"
+    app:neumorph_shapeAppearance="@style/NeumorphismCard"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        >
+    <soup.neumorphism.NeumorphTextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout Hotels Nearby"
+        android:textColor="@color/primary_text"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        android:textSize="@dimen/_20sdp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            >
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shapeType="basin"
+            app:neumorph_shapeAppearance="@style/NeumorphismImage"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/baseline_chevron_right_24"
+            android:tint="@color/primary"
+            android:padding="@dimen/_2sdp"
+            />
+        </soup.neumorphism.NeumorphCardView>
+        </FrameLayout>
+    </RelativeLayout>
+</soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+</RelativeLayout>

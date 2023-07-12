@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userNavigate"
+    android:gravity="center"
+    android:background="@color/background"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:id="@+id/giff"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    >
+    <ImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+
+        android:scaleType="fitXY"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/FirstLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/giff"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="15sp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:ignore="UselessParent">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/CHoseLocs"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="15dp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            tools:ignore="TextSizeCheck,VisualLintBounds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="10sp"
+                android:text="Check Location"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text"
+                app:drawableTopCompat="@drawable/baseline_add_location_24"
+                tools:ignore="HardcodedText" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/FavLoc"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="150dp"
+            android:layout_marginVertical="15dp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            tools:ignore="VisualLintBounds">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Wishlist"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text"
+                app:drawableTopCompat="@drawable/baseline_favorite_24"
+                tools:ignore="HardcodedText" />
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SecLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FirstLL"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15sp"
+        >
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/ReqHotels"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="150dp"
+            android:layout_marginVertical="15dp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            tools:ignore="VisualLintBounds">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add Business"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text"
+                app:drawableTopCompat="@drawable/baseline_add_business_24"
+                tools:ignore="HardcodedText" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/requests"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="150dp"
+            android:layout_marginVertical="15dp"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            tools:ignore="VisualLintBounds"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_backgroundColor="@color/background"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Your Requests"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text"
+                app:drawableTopCompat="@drawable/baseline_task_alt_24"
+                tools:ignore="HardcodedText" />
+
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SecLL"
+            android:gravity="center">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/Logout"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="150dp"
+                android:layout_marginVertical="15dp"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textSize="15sp"
+                    android:textColor="@color/primary_text"
+                    android:layout_gravity="center"
+                    app:drawableTopCompat="@drawable/baseline_logout_24"
+                    tools:ignore="HardcodedText" />
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_8sdp"-->
+<!--        android:background="@drawable/divider_background"-->
+<!--        android:layout_above="@+id/navigation"-->
+<!--        />-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="@dimen/_4sdp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        >-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+<!--            <soup.neumorphism.NeumorphCardView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:neumorph_backgroundColor="@color/background"-->
+<!--                app:neumorph_shadowColorLight="@color/light_shadow"-->
+<!--                app:neumorph_shadowColorDark="@color/dark_shadow"-->
+<!--                app:neumorph_shapeAppearance="@style/NeumorphismImage"-->
+<!--                app:neumorph_shapeType="pressed"-->
+<!--                >-->
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:layout_width="@dimen/_35sdp"-->
+<!--                    android:layout_height="@dimen/_35sdp"-->
+<!--                    android:src="@drawable/baseline_add_location_24"-->
+<!--                    android:tint="@color/primary"-->
+<!--                    android:padding="@dimen/_8sdp"-->
+<!--                    />-->
+<!--            </soup.neumorphism.NeumorphCardView>-->
+<!--        </FrameLayout>-->
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="@dimen/_20sdp"-->
+<!--            android:layout_height="@dimen/_20sdp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/baseline_favorite_24"/>-->
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="@dimen/_20sdp"-->
+<!--            android:layout_height="@dimen/_20sdp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/baseline_add_business_24"-->
+<!--            android:tint="@color/primary"-->
+<!--            />-->
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="@dimen/_20sdp"-->
+<!--            android:layout_height="@dimen/_20sdp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/baseline_logout_24"-->
+<!--            android:tint="@color/primary"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

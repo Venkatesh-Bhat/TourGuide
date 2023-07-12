@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signUp"
+    android:background="@color/background"
+    >
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/signImg"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/_10sdp"
+
+    />
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/signImg"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        style="@style/Widget.Neumorph.CardView"
+        app:neumorph_shapeType="pressed"
+
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emailC"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        >
+
+        <EditText
+            android:id="@+id/email"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:paddingEnd="10dp"
+            android:layout_height="match_parent"
+            android:padding="14dp"
+            android:textColorHint="@color/text_color"
+            android:autofillHints=""
+            tools:ignore="HardcodedText,RtlSymmetry,VisualLintTextFieldSize" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        style="@style/Widget.Neumorph.CardView"
+        app:neumorph_shapeType="pressed"
+        android:layout_below="@+id/emailC"
+        android:id="@+id/passC1"
+        android:layout_centerHorizontal="true"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        >
+
+        <EditText
+            android:id="@+id/pass1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints=""
+            android:gravity="center"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            tools:ignore="HardcodedText,RtlSymmetry,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+    </soup.neumorphism.NeumorphCardView>
+<soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        style="@style/Widget.Neumorph.CardView"
+        app:neumorph_shapeType="pressed"
+        android:layout_below="@+id/passC1"
+        android:id="@+id/passC2"
+    android:layout_centerHorizontal="true"
+    app:neumorph_shadowColorLight="@color/light_shadow"
+    app:neumorph_shadowColorDark="@color/dark_shadow"
+        >
+
+        <EditText
+            android:textColor="@color/text_color"
+            android:inputType="textPassword"
+            android:gravity="center"
+            android:id="@+id/pass2"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:paddingEnd="10dp"
+            android:layout_height="match_parent"
+            android:hint="Confirm Password"
+            android:autofillHints=""
+            android:textColorHint="@color/text_color"
+            tools:ignore="HardcodedText,RtlSymmetry,VisualLintTextFieldSize" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/register"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passC2"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:text="Sign Up"
+        android:textColor="@color/text_color"
+        style="@style/Widget.Neumorph.Button"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        tools:ignore="HardcodedText">
+    </soup.neumorphism.NeumorphButton>
+
+</RelativeLayout>

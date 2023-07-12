@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewHotel"
+    android:background="@color/background"
+    >
+
+    <ImageView
+        android:id="@+id/zoomImg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/baseline_star_rate_24"
+        android:visibility="invisible"
+        tools:ignore="ContentDescription,HardcodedText" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/background"
+        >
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainCard"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:padding="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:id="@+id/im"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/previous"
+                        android:layout_width="30sp"
+                        android:layout_height="match_parent"
+                        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+                        app:neumorph_backgroundColor="@color/background"
+                        app:neumorph_shadowElevation="@dimen/_5sdp"
+                        android:contentDescription=""
+                        android:onClick="onPreviousButtonClick"
+                        android:src="@drawable/baseline_chevron_left_24"
+                        app:neumorph_shadowColorLight="@color/light_shadow"
+                        app:neumorph_shadowColorDark="@color/dark_shadow"
+                        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        android:id="@+id/image"
+                        android:layout_width="285dp"
+                        android:layout_height="161dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hampi"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/next"
+                        android:layout_width="30sp"
+                        android:layout_height="match_parent"
+                        android:contentDescription=""
+                        android:onClick="onNextButtonClick"
+                        android:src="@drawable/baseline_chevron_right_24"
+                        app:neumorph_shadowColorLight="@color/light_shadow"
+                        app:neumorph_shadowColorDark="@color/dark_shadow"
+                        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/im"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textSize="30sp"
+                    android:textColor="#F8BD0C"
+                    app:drawableStartCompat="@drawable/baseline_star_rate_24"
+                    tools:ignore="RelativeOverlap" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/im"
+                    android:id="@+id/HotelName"
+                    android:text="Hotel Name:"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/secondary_text"
+                    />
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/HotelName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="TextView"
+                    android:layout_toStartOf="@+id/rating"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_25sdp"
+                    tools:ignore="HardcodedText"
+                    tools:layout_editor_absoluteX="173dp"
+                    tools:layout_editor_absoluteY="341dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:id="@+id/HotelPhone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Phone No.:"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/secondary_text"
+                    />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/HotelPhone"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:neumorph_shadowColorLight="@color/light_shadow"
+                    app:neumorph_shadowColorDark="@color/dark_shadow"
+                    android:text="Phone No"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_20sdp"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phone"
+                    android:id="@+id/HotelPrice"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Price:"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/secondary_text"
+                    />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/HotelPrice"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Price"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@color/primary_text"
+                    tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="call"
+                    app:neumorph_backgroundColor="@color/background"
+                    app:neumorph_shadowColorDark="@color/dark_shadow"
+                    app:neumorph_shadowColorLight="@color/light_shadow"
+                    app:neumorph_shadowElevation="@dimen/_5sdp"
+                    app:neumorph_shapeAppearance="@style/NeumorphismImage"
+                    app:neumorph_shapeType="flat"
+                    tools:ignore="SpeakableTextPresentCheck">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/baseline_call_24" />
+                </soup.neumorphism.NeumorphCardView>
+            </RelativeLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
