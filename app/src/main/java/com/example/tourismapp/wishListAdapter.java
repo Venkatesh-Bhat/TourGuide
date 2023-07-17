@@ -24,8 +24,8 @@ import java.util.ArrayList;
 
 public class wishListAdapter extends RecyclerView.Adapter<wishListAdapter.ViewHolder> {
     private final Context context;
-    private final ArrayList<locations> locationsArrayList;
-    private DatabaseReference wishRef;
+    private ArrayList<locations> locationsArrayList;
+    private final DatabaseReference wishRef;
 
     public wishListAdapter(Context context,ArrayList<locations> locationsArrayList, DatabaseReference wishRef){
         this.context = context;
@@ -100,6 +100,12 @@ public class wishListAdapter extends RecyclerView.Adapter<wishListAdapter.ViewHo
     @Override
     public int getItemCount() {
         return locationsArrayList.size();
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void filterList(ArrayList<locations> filteredList) {
+        locationsArrayList = filteredList;
+        notifyDataSetChanged();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

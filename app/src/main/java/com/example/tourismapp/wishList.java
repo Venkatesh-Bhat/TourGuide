@@ -9,6 +9,9 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,6 +39,37 @@ public class wishList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_list);
+
+
+        EditText searchItem = findViewById(R.id.searchItem);
+        searchItem.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+
+            private void filter(String text) {
+                ArrayList<locations> filteredList= new ArrayList<>();
+                for(locations item : locationsArrayList){
+                    if(item.getLoc_name().toLowerCase().contains(text.toLowerCase())){
+                        filteredList.add(item);
+                    }
+                }
+
+                WishListAdapter.filterList(filteredList);
+            }
+        });
+
 
         wishRV = findViewById(R.id.wishRv);
 

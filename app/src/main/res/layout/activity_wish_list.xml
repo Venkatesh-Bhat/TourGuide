@@ -24,14 +24,17 @@
         >
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:drawableStart="@drawable/baseline_search_24"
         android:padding="14dp"
         android:hint="Search"
+        android:id="@+id/searchItem"
         android:textAlignment="viewStart"
         tools:ignore="HardcodedText"
         android:inputType="textFilter"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:background="@null"
+        />
     </soup.neumorphism.NeumorphCardView>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@+id/searchCard"
